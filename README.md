@@ -21,7 +21,7 @@ A private WooCommerce payment gateway plugin integrating M-Pesa STK Push using S
 1. Clone this repository into `wp-content/plugins/`.
 2. Activate the plugin via **WordPress > Plugins**.
 3. Go to **WooCommerce > Settings > Payments** and enable **M-Pesa STK Push**.
-4. Enter your Daraja credentials and callback URL.
+4. Enter your Daraja credentials.
 
 ---
 
@@ -33,8 +33,6 @@ In the gateway settings, enter the following:
 - **Consumer Secret**
 - **Shortcode**
 - **Passkey**
-- **Callback URL** (e.g., `https://yourdomain.com/payment/mpesa-callback.php`)
-- **Environment**: `sandbox` or `production`
 
 ---
 
