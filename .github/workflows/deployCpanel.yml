@@ -17,9 +17,9 @@ jobs:
       - name: Deploy with FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
-              server: ${{ secrets.FTP_HOST }}
-              username: ${{ secrets.FTP_USER }}
-              password: ${{ secrets.FTP_PASS }}
+              server: ${{ secrets.FTP_SERVER }}
+              username: ${{ secrets.FTP_USERNAME }}
+              password: ${{ secrets.FTP_PASSWORD }}
               server-dir: /public_html/payment/wp-content/plugins/daraja-api/
               local-dir: daraja-api/
 
