@@ -20,4 +20,8 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           server-dir: /public_html/payment/wp-content/plugins/daraja-api/
+<<<<<<< HEAD
           local-dir: daraja-api/
+=======
+          local-dir: daraja-api/
+>>>>>>> b82d2fd1c1ba448b322ae403fdd5fe3ecfc655f4
