@@ -1,0 +1,22 @@
+name: FTP Deploy Daraja Plugin
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  ftp-deploy:
+    name: Upload to cPanel via FTP
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: FTP Deploy
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          server-dir: /home1/gpoweraf/gpower.africa/payment/wp-content/plugins/daraja-api
