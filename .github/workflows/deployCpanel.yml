@@ -19,6 +19,5 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          server-dir: /public_html/payment/wp-content/plugins/daraja-api/
+          server-dir: public_html/payment/wp-content/plugins/daraja-api/
           local-dir: ./
-          dangerous-clean-slate: true
