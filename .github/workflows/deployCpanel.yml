@@ -1,23 +1,24 @@
-name: FTP Deploy Daraja Plugin
+name: Deploy Daraja Plugin to cPanel
 
 on:
   push:
     branches:
-      - main
+      - main  # or the branch you’re deploying from
 
 jobs:
   ftp-deploy:
-    name: Upload to cPanel via FTP
+    name: Upload plugin via FTP
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
 
-      - name: FTP Deploy
+      - name: Deploy with FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USER }}
+          password: ${{ secrets.FTP_PASS }}
           server-dir: /public_html/payment/wp-content/plugins/daraja-api/
-
+          local-dir: daraja-api/
